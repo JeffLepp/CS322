@@ -1,11 +1,7 @@
-# Use official Java image
-FROM openjdk:8-jdk-alpine
+FROM eclipse-temurin:17-jdk-alpine
 
-# Create app directory
 WORKDIR /app
 
-# Copy build output
-COPY build/libs/cs322app.jar app.jar
+COPY build/libs/CS322.jar app.jar
 
-# Run the jar
 CMD ["java", "-jar", "app.jar"]
